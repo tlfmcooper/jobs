@@ -1,19 +1,19 @@
 
 <div class="border-bottom row" style="margin-bottom: 16px;padding-bottom:8px; ">
     <div class="col-9" >
-<h4 style="color: rgb(120,120,120); margin-bottom: 4px;">
-    {{job[ 'title']}}
-</h4>
-<div>
-    <b>Location:</b> {{job['location']}}
-</div>
+        <h4 style="color: rgb(120,120,120); margin-bottom: 4px;">
+            {{job[ 'title']}}
+        </h4>
+    <div>
+        <b>Location:</b> {{job['location']}}
+    </div>
 {% if 'salary' in job %}
     <div>
-    <b>Salary:</b> {{job['salary']}}
+        <b>Salary:</b> {{job['salary']}}
     </div>
 {% endif %}
-</div>
-<div class="col-2 padding-right:16px">
-    <a href="mailto:developer0.ali1@gmail.com?Subject=Application for {{job['title']}}" type="button" class="btn btn-outline-primary float-right align-middle">Apply</a>
-</div>
+    </div>
+    <div class="col-2 padding-right:16px">
+        <a href="mailto:developer0.ali1@gmail.com?subject=Application%20for%20{{job['title']}}&body=Name%3A%20%3Cyour%20name%20here%3E%0D%0AResume%3A%20%3Clink%20or%20attach%3E%0D%0ALinkedin%3A%20%3Cyour%20linkedin%20profile%20link%3E" type="button" class="btn btn-outline-primary float-right align-middle">Apply</a>
+    </div>
 </div>
