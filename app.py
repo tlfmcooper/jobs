@@ -1,5 +1,5 @@
 import flask
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, jsonify, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
@@ -17,6 +17,11 @@ JOBS = [
 
 def index():
     return render_template('index.html', jobs=JOBS)
+
+
+@app.route('/api/jobs')
+def list_jobs():
+    return jsonify(JOBS)
 
 
 
