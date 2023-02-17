@@ -6,21 +6,33 @@
     <meta name="viewport" content="width=       , initial-scale=1.0">
      <!-- Bootstrap -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <title>Jobs</title>
+    <style>
+        #banner {height: 360px;
+        width:100%;
+    object-fit: cover;}
+    </style>
+     <title>Jobs</title>
     
 </head>
 <body>
-    <div id="container">
-    <h1>Careers</h1>
-    <img id="banner" src="./static/logo.png" alt="logo">
-    <h2>About Jobs</h2>
-    <p class="aboutus">Welcome to our website, your go-to source for finding exciting career opportunities in the financial services industry, particularly in asset management. We specialize in connecting talented individuals with leading firms in the industry, providing opportunities for professional growth and advancement. If you're a data scientist, quantitative analyst, quantitative researcher, or portfolio manager looking for the next step in your career, we've got you covered. Our network of partners includes top-tier asset management firms that offer a range of investment solutions to clients worldwide. We are committed to helping our candidates find the perfect fit, providing access to a wide range of career options and support throughout the hiring process. Join us today to take the first step towards your dream career in the financial services industry.</p>
+    <div class="container">
+    <h1 class="text-center mt-2 mb-4">Careers</h1>
+    <img class="object-fit-xxl-contain border rounded" src="./static/logo.jpg" alt="logo">
+    <h2 class="text-center">About Jobs</h2>
+    <p class="lead">Welcome to our website, your go-to source for finding exciting career opportunities in the financial services industry, particularly in asset management. We specialize in connecting talented individuals with leading firms in the industry, providing opportunities for professional growth and advancement. If you're a data scientist, quantitative analyst, quantitative researcher, or portfolio manager looking for the next step in your career, we've got you covered. Our network of partners includes top-tier asset management firms that offer a range of investment solutions to clients worldwide. We are committed to helping our candidates find the perfect fit, providing access to a wide range of career options and support throughout the hiring process. Join us today to take the first step towards your dream career in the financial services industry.</p>
 
-    <h2>Open Positions</h2>
-    <p>TODO - Show the jobs here</p>
-    <div style="text-align:center;">
-    <button>Contact Us</button>
-    <p>Copyright 2022, ALKHAF Quants</p>
+    <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+    <p>
+         <div>
+            {%for job in jobs %}
+                {%include 'job_items.html'%}
+            {%endfor%}
+        </div>
+       
+    </p>
+    <div class="text-center">
+    <button class="btn btn-primary btn-md">Contact Us</button>
+    <p class="mt-4">Copyright 2022, ALKHAF Quants</p>
     </div>
 </div>
 </body>
